@@ -34,6 +34,7 @@ const SingleAgent = () => {
         setAgent(res?.data);
         }catch(error){
             alert("Failed to fetch list of agents, try again later!");
+            console.log(error);
         }
     }
 
