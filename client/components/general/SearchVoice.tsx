@@ -2,26 +2,31 @@ import { Search } from 'lucide-react'
 import React from 'react'
 
 interface voiceProps {
-  name : string,
-  sex : string
+    id:number,
+    name : string,
+    sex: string
 }
 
 const SearchVoice = () => {
   
     const voice:voiceProps[] = [
         {
+            id:1,
             name : "Marie",
             sex : "Female"
         },
         {
+            id:2,
             name : "Sarah",
             sex : "Female"
         },
         {
+            id:3,
             name : "Mark",
             sex : "Male"
         },
         {
+            id:4,
             name : "Sam",
             sex : "Male"
         },
@@ -42,7 +47,7 @@ const SearchVoice = () => {
             </div>
             {
                 voice.map((item:voiceProps)=>(
-                    <div className='flex items-center justify-between w-[90%] px-2 py-1 bg-[#eae9fc] mt-1 rounded-lg'>
+                    <div key={item.id} className='flex items-center justify-between w-[90%] px-2 py-1 bg-[#eae9fc] mt-1 rounded-lg'>
                         <div className='font-bold'>{item.name}</div>
                         <div className='bg-[#604ee1] text-white rounded-md px-1 text-center text-xs w-12'>{item.sex}</div>
                     </div>
@@ -55,7 +60,7 @@ const SearchVoice = () => {
             </div>
             {
                 voice.map((item:voiceProps)=>(
-                    <div className='flex items-center justify-between w-[90%] px-2 py-1 bg-[#eae9fc] mt-1 rounded-lg'>
+                    <div key={item.id} className='flex items-center justify-between w-[90%] px-2 py-1 bg-[#eae9fc] mt-1 rounded-lg'>
                         <div className='font-bold'>{item.name}</div>
                         <div className='bg-[#604ee1] text-white rounded-md px-1 text-center text-xs w-12'>{item.sex}</div>
                     </div>
@@ -68,7 +73,7 @@ const SearchVoice = () => {
             </div>
             {
                 voice.map((item:voiceProps)=>(
-                    <div className='flex items-center justify-between w-[90%] px-2 py-1 bg-[#eae9fc] mt-1 rounded-lg'>
+                    <div key={item.id} className='flex items-center justify-between w-[90%] px-2 py-1 bg-[#eae9fc] mt-1 rounded-lg'>
                         <div className='font-bold'>{item.name}</div>
                         <div className='bg-[#604ee1] text-white rounded-md px-1 text-center text-xs w-12'>{item.sex}</div>
                     </div>
