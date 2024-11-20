@@ -1,5 +1,5 @@
 "use client"
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Table, TableBody, TableCaption, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -28,6 +28,7 @@ const AgentsTable = () => {
             setAgentsList(res?.data);
         }catch(error){
             alert("Failed to fetch list of agents, try again later!");
+            console.log(error);
         }
     }
 
