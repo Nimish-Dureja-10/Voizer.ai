@@ -48,7 +48,7 @@ const AgentsTable = () => {
         </TableHeader>
         <TableBody>
             {
-                agentsList.map((agent)=>(
+                agentsList.map((agent:agentProps)=>(
                     <TableRow key={agent.agent_id}>
                         <TableCell className="text-center">{agent.agent_name}</TableCell>
                         <TableCell className="text-center">{agent.voice_id.slice(7)}</TableCell>
